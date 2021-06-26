@@ -22,6 +22,10 @@ import java.util.*;
 
 @Controller
 public class MainController {
+    public static final String APPOINTMENT_MODEL = "appointment";
+    public static final String ABOUT_MODEL = "about";
+    public static final String METHODS_MODEL = "methods";
+
     @Autowired
     private CustomerService customerService;
     @Autowired
@@ -29,18 +33,18 @@ public class MainController {
 
     @GetMapping("/about")
     public String about() {
-        return "about";
+        return ABOUT_MODEL;
     }
 
     @GetMapping("/methods")
     public String methods() {
-        return "methods";
+        return METHODS_MODEL;
     }
 
     @GetMapping("/appointment")
     public String appointment(Model model) {
-        model.addAttribute("appointment", getDefaultAppointment());
-        return "appointment";
+        model.addAttribute(APPOINTMENT_MODEL, getDefaultAppointment());
+        return APPOINTMENT_MODEL;
     }
 
     @PostMapping("/appointment")
@@ -52,8 +56,8 @@ public class MainController {
         session.setCustomerId(customerId);
         sessionService.update(session, session.getId());
 
-        model.addAttribute("appointment", getDefaultAppointment());
-        return "appointment";
+        model.addAttribute(APPOINTMENT_MODEL, getDefaultAppointment());
+        return APPOINTMENT_MODEL;
     }
 
     private Appointment getDefaultAppointment() {
@@ -100,16 +104,14 @@ public class MainController {
             resultDays.add(new Day(name, dayBefore, new ArrayList<>(), false));
         }
 
-        vacantDays.forEach((k, v) -> {
-            resultDays.forEach(day -> {
-                if (day.getDate().equals(k)) {
-                    day.setTimes(v);
-                    if (!day.getDate().isBefore(currentDate)) {
-                        day.setActive(true);
-                    }
+        vacantDays.forEach((k, v) -> resultDays.forEach(day -> {
+            if (day.getDate().equals(k)) {
+                day.setTimes(v);
+                if (!day.getDate().isBefore(currentDate)) {
+                    day.setActive(true);
                 }
-            });
-        });
+            }
+        }));
 
         appointment.setDays(resultDays);
         return appointment;
