@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+    <link rel="stylesheet" th:href="@{/css/context.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <script th:src="@{/js/menu.js}"></script>
+    <title>Женская психология</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-blur"></div>
+        <div class="menu-buttons_block">
+            <a href="about" class="customer_menu-button round_button">Обо мне</a>
+            <a href="" class="customer_menu-button round_button selected_button">Методика</a>
+            <a href="appointment" class="customer_menu-button round_button">Запись</a>
+            <a class="customer_menu-button round_button">Связь</a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-image_box">
+                <img th:src="@{/icons/header_img.jpg}"/>
+            </div>
+            <div class="header-text_box">
+                <div class="header-text_box-corners">
+                    <div class="header-text">Женская психология</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="context">
+            <div class="context-text_title">Как проходит моя консультация</div>
+            <div class="context-text">
+                <p>На первой консультации мы "находим" вашу проблему!</p>
+                <p>Почему "находим", потому-что то, что лежит на поверхности обычно является следствием, а не причиной.</p>
+                &nbsp;
+                <p>На последующих консультациях мы вместе с вами подбираем эффективные решения возникшей проблемы.</p>
+                &nbsp;
+                <p>Я поддерживаю с вами связь,сопровождаю по мере решения проблемы.</p>
+            </div>
+            <div class="context-text_title">Методы, которые я применяю</div>
+            <div class="context-text text_list">
+                <p>Графологический анализ почерка</p>
+                <p>Арт-терапия: свечи,краски,пластилин</p>
+                <p>Нейрографика</p>
+                <p>Метафорические карты</p>
+                <p>Сказкотерапия для взрослых</p>
+                <p>Стандартные психологические тесты</p>
+                <p>Авторские психологические тесты</p>
+                <p>Цветовой тест Люшера</p>
+                <p>Тест портретный Л.Сонди</p>
+            </div>
+            <div class="context-text_title">Всего за 1 консультацию, мы с Вами</div>
+            <div class="context-text text_list">
+                <p>Найдем пути выхода из кризисной ситуации</p>
+                <p>Определим ваши таланты и способности</p>
+                <p>Узнаем уязвимые стороны личности и как их защитить</p>
+                <p>Найдем предназначение</p>
+                <p>Снизим тревогу и найдем точку опоры</p>
+            </div>
+            <div class="context-text_title">Стоимость моих консультаций</div>
+            <div class="context-text">
+                <p>Стоимость первичной ознакомительной консультации-2000 руб.</p>
+                <p>!!! Первые 20 минут бесплатно !!!</p>
+                <p>60 мин. -2500руб.</p>
+                <p>2 часа непрерывной консультации-3500 руб.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a class="footer-link" href=""><img th:src="@{/icons/vk.png}" class="footer-link_icon"/>Vkontakte</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/whatsapp.png}" class="footer-link_icon"/>WhatsApp</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/telegram.png}" class="footer-link_icon"/>Telegram</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/facebook.png}" class="footer-link_icon"/>Facebook</a>
+        </div>
+    </div>
+</body>
+</html>

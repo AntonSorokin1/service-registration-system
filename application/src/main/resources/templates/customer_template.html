@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+    <link rel="stylesheet" th:href="@{/css/context.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <script th:src="@{/js/menu.js}"></script>
+    <title>Женская психология</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-blur"></div>
+        <div class="menu-buttons_block">
+            <a href="about" class="customer_menu-button round_button">Обо мне</a>
+            <a href="methods" class="customer_menu-button round_button">Методика</a>
+            <a href="appointment" class="customer_menu-button round_button">Запись</a>
+            <a class="customer_menu-button round_button">Связь</a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-image_box">
+                <img th:src="@{/icons/header_img.jpg}"/>
+            </div>
+            <div class="header-text_box">
+                <div class="header-text_box-corners">
+                    <div class="header-text">Женская психология</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="context">
+
+        </div>
+
+        <div class="footer">
+            <a class="footer-link" href=""><img th:src="@{/icons/vk.png}" class="footer-link_icon"/>Vkontakte</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/whatsapp.png}" class="footer-link_icon"/>WhatsApp</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/telegram.png}" class="footer-link_icon"/>Telegram</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/facebook.png}" class="footer-link_icon"/>Facebook</a>
+        </div>
+    </div>
+</body>
+</html>

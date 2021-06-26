@@ -1,0 +1,117 @@
+.customer_menu-button {
+    width: 150px;
+    height: 50px;
+
+    background: #EAB586;
+
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer_menu-button:hover {
+    border: 2px solid #B2481B;
+    box-sizing: border-box;
+}
+
+.customer_menu-button:active {
+    filter: none;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+    border: 2px solid #B2481B;
+    box-sizing: border-box;
+}
+
+.schedule-button {
+    display: flex;
+}
+
+.schedule-button_input {
+    display: none;
+}
+
+.schedule-button_label {
+    width: 100px;
+    height: 80px;
+
+    background: #EAB586;
+
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+/* Select */
+.schedule-button_input:checked + .schedule-button_label {
+    background: #B2481B;
+}
+
+/* Hover */
+.schedule-button label:hover {
+    border: 2px solid #B2481B;
+    box-sizing: border-box;
+}
+
+/* Click */
+.schedule-button_input:active + .schedule-button_label {
+    filter: none;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+    border: 2px solid #B2481B;
+    box-sizing: border-box;
+}
+
+/* Disable */
+.schedule-button_input:disabled + .schedule-button_label {
+    border: none;
+    filter: none;
+    box-shadow: none;
+    background: #C4C4C4;
+}
+
+.round_button,
+.round_button label {
+    border-radius: 10px;
+}
+
+.selected_button {
+    background: #B2481B;
+    border: 2px solid #B2481B;
+    box-sizing: border-box;
+}
+
+.disabled_button,
+.disabled_button:hover,
+.disabled_button[hover],
+.disabled_button:active,
+.disabled_button[active] {
+    background: #C4C4C4;
+    
+    border: none;
+    
+    filter: none;
+    box-shadow: none;
+}

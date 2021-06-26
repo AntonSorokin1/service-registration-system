@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/font.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+    <link rel="stylesheet" th:href="@{/css/context.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <script th:src="@{/js/menu.js}"></script>
+    <title>Женская психология</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-blur"></div>
+        <div class="menu-buttons_block">
+            <a href="" class="customer_menu-button round_button selected_button">Обо мне</a>
+            <a href="methods" class="customer_menu-button round_button">Методика</a>
+            <a href="appointment" class="customer_menu-button round_button">Запись</a>
+            <a class="customer_menu-button round_button">Связь</a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-image_box">
+                <img th:src="@{/icons/header_img.jpg}"/>
+            </div>
+            <div class="header-text_box">
+                <div class="header-text_box-corners">
+                    <div class="header-text">Женская психология</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="context">
+            <img th:src="@{/icons/delimiter.png}" class="context-text_delimiter"/>
+            <div class="context-text">
+                <p>Привет!</p>
+                <p>Меня зовут Светлана Сорокина!</p>
+                &nbsp;
+                <p>Я женский психолог</p>
+                <p>с опытом работы более 12 лет!</p>
+                <p>В моей практике 8000 успешных консультаций</p>
+                <p>и более 1500 тренингов!</p>
+            </div>
+            <img th:src="@{/icons/delimiter.png}" class="context-text_delimiter"/>
+            <div class="context-text">
+                <p>Я специалист по проблемам:</p>
+                <p>личностного роста,</p>
+                <p>детско - родительским отношениям и</p>
+                <p>выхода из кризисных состояний.</p>
+                <p>Мой профессиональный опыт помогает определить вашу проблему и найти пути решения с первой консультации.</p>
+                &nbsp;
+                <p>Я знаю что такое одиночество, депрессия, предательство, созависимые и токсичные отношения, отсутствие интереса и цели в жизни.</p>
+                <p>И я могу помочь вам!</p>
+                &nbsp;
+                <p>Я испытываю большую радость, когда ваша проблема находит решение, когда читаю ваши отзывы, вижу ваши счастливые глаза!</p>
+                &nbsp;
+                <p>Провожу консультации и психологические марафоны онлайн (весь Мир)</p>
+            </div>
+            <img th:src="@{/icons/delimiter.png}" class="context-text_delimiter"/>
+            <div class="context-text">
+                <p>Помогаю женщинам обрести уверенность в себе,</p>
+                <p>выстроить личные границы и выйти из токсичных отношений!</p>
+                <p>Помогу найти общий язык со своим ребенком!</p>
+                <p>Найти свое предназначение и обрести любовь к себе!</p>
+                <p>Выйти из замкнутого круга проблем и неудач!</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a class="footer-link" href=""><img th:src="@{/icons/vk.png}" class="footer-link_icon"/>Vkontakte</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/whatsapp.png}" class="footer-link_icon"/>WhatsApp</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/telegram.png}" class="footer-link_icon"/>Telegram</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/facebook.png}" class="footer-link_icon"/>Facebook</a>
+        </div>
+    </div>
+</body>
+</html>

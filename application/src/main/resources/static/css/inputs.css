@@ -1,0 +1,62 @@
+.input-title {
+    font-family: 'port_lligat_sansregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    align-items: center;
+
+    color: #000000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+.input-field {
+    width: 400px;
+    height: 50px;
+
+    background: #FFFFFF;
+    border: 3px solid #B2481B;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    padding: 0 1em;
+
+    font-family: 'port_lligat_sansregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.input-age {
+    width: 200px;
+}
+
+.input-area {
+    resize: none;
+
+    width: 900px;
+    height: 150px;
+
+    background: #FFFFFF;
+    border: 3px solid #B2481B;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    padding: 0.5em 1em;
+
+    font-family: 'port_lligat_sansregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}

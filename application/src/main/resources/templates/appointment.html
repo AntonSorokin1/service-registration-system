@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+    <link rel="stylesheet" th:href="@{/css/context.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <link rel="stylesheet" th:href="@{/css/inputs.css}">
+    <script th:src="@{/js/menu.js}"></script>
+    <title>Женская психология</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-blur"></div>
+        <div class="menu-buttons_block">
+            <a href="about" class="customer_menu-button round_button">Обо мне</a>
+            <a href="methods" class="customer_menu-button round_button">Методика</a>
+            <a href="" class="customer_menu-button round_button selected_button">Запись</a>
+            <a class="customer_menu-button round_button">Связь</a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-image_box">
+                <img th:src="@{/icons/header_img.jpg}"/>
+            </div>
+            <div class="header-text_box">
+                <div class="header-text_box-corners">
+                    <div class="header-text">Женская психология</div>
+                </div>
+            </div>
+        </div>
+
+        <form class="context" action="#" th:action="@{/appointment}" th:object="${appointment}" method="post">
+            <div class="context-section_title">День</div>
+            <div class="context-section day_section">
+                <div class="schedule-button round_button" th:each="day,iterator : ${appointment.days}">
+                    <input type="radio" class="schedule-button_input" name="data_button" th:id="'data_button_' + ${iterator.index}" th:disabled="${!day.isActive}" th:value="${day.date}" th:field="*{date}">
+                    <label class="schedule-button_label" th:for="'data_button_' + ${iterator.index}" th:text="${day.name}">1 июля</label>
+                </div>
+            </div>
+            <div class="context-section_title">Время</div>
+            <div class="context-section">
+                <div class="time_section disabled_section" th:each="day,dayIterator : ${appointment.days}" th:id="'time_section_' + ${dayIterator.index}">
+                    <div class="schedule-button round_button" th:each="time,timeIterator : ${day.times}">
+                        <input type="radio" class="schedule-button_input" name="time_button" th:id="'time_button_' + ${dayIterator.index} + '_' + ${timeIterator.index}" th:disabled="${!time.isActive}" th:value="${time.localTime}" th:field="*{time}">
+                        <label class="schedule-button_label" th:for="'time_button_' + ${dayIterator.index} + '_' + ${timeIterator.index}" th:text="${time.name}">С 0:00 До 1:00</label>
+                    </div>
+                </div>
+            </div>
+            <div class="context-section_title">Расскажите о себе</div>
+            <div class="context-section form_section">
+                <div class="input-block">
+                    <div class="input-title">Ваше имя:</div>
+                    <input class="input-field" type="text" placeholder="Введите имя..." th:field="*{name}"/>
+                </div>
+                <div class="input-block">
+                    <div class="input-title">Ваш возраст:</div>
+                    <input class="input-field" type="number" placeholder="18" th:field="*{age}"/>
+                </div>
+                <div class="input-block">
+                    <div class="input-title">Ваш номер телефона:</div>
+                    <input class="input-field"  type="text" placeholder="Введите номер телефона..." th:field="*{phone}"/>
+                </div>
+                <div class="input-block">
+                    <div class="input-title">Ваша электронная почта:</div>
+                    <input class="input-field"  type="text" placeholder="Введите email..." th:field="*{email}"/>
+                </div>
+                <div class="input-block">
+                    <div class="input-title">Укажите тему обращения:</div>
+                    <textarea class="input-area" placeholder="Укажите тему обращения..." th:field="*{theme}"></textarea>
+                </div>
+            </div>
+            <button class="customer_menu-button round_button" type="submit" style="width: 200px;">Записаться</button>
+        </form>
+
+        <div class="footer">
+            <a class="footer-link" href=""><img th:src="@{/icons/vk.png}" class="footer-link_icon"/>Vkontakte</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/whatsapp.png}" class="footer-link_icon"/>WhatsApp</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/telegram.png}" class="footer-link_icon"/>Telegram</a>
+            <a class="footer-link" href=""><img th:src="@{/icons/facebook.png}" class="footer-link_icon"/>Facebook</a>
+        </div>
+    </div>
+</body>
+</html>

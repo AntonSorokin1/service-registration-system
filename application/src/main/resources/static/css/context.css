@@ -1,0 +1,136 @@
+.context {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 1000px;
+
+    margin: 15px 0;
+    padding: 65px 0;
+
+    background: #E0C2C0;
+
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 45px;
+
+    z-index: 1;
+}
+
+.context > div {
+    margin: 15px 0;
+}
+
+.context-section_title {
+    width: 900px;
+
+    font-family: 'port_lligat_sansregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 39px;
+    align-items: center;
+    text-transform: uppercase;
+
+    color: #57394A;
+
+    padding-bottom: 10px;
+    border-bottom: 2px solid #57394A;
+}
+
+.context-section {
+    width: 900px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.context-section > .schedule-button {
+    margin: 10px;
+    /* padding: 0 0.75em; */
+}
+
+.day_section {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.time_section {
+    width: 750px;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.form_section {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.form_section > div {
+    margin: 10px 0;
+}
+
+.context-text_title {
+    width: 900px;
+
+    font-family: 'port_lligat_sansregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #57394A;
+
+    padding-bottom: 10px;
+    border-bottom: 2px solid #57394A;
+}
+
+.context-text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    width: 900px;
+}
+
+.context-text p{
+    font-family: 'port_lligat_sansregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #57394A;
+}
+
+.context-text_delimiter {
+    width: 190px;
+    height: 30px;
+
+    margin: 10px 0;
+}
+
+.text_list {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.text_list p:before {
+    content: "\2022\2002";
+}
+
+.disabled_section {
+    display: none;
+}
