@@ -2,7 +2,7 @@ package sorant.diplom.srs.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
-import sorant.diplom.srs.AbstractIdentifiableObject;
+import sorant.diplom.srs.entities.AbstractIdentifiableObject;
 import sorant.diplom.srs.services.CRUDService;
 
 import java.util.List;

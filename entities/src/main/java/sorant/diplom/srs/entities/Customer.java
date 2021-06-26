@@ -1,4 +1,4 @@
-package sorant.diplom.srs;
+package sorant.diplom.srs.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

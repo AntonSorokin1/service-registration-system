@@ -1,6 +1,6 @@
 package sorant.diplom.srs.services;
 
-import sorant.diplom.srs.Session;
+import sorant.diplom.srs.entities.Session;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

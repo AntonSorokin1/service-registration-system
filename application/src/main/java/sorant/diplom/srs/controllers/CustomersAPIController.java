@@ -2,7 +2,7 @@ package sorant.diplom.srs.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sorant.diplom.srs.Customer;
+import sorant.diplom.srs.entities.Customer;
 import sorant.diplom.srs.services.CustomerService;
 
 @RestController

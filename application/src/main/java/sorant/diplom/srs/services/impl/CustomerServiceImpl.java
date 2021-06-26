@@ -1,7 +1,7 @@
 package sorant.diplom.srs.services.impl;
 
 import org.springframework.stereotype.Service;
-import sorant.diplom.srs.Customer;
+import sorant.diplom.srs.entities.Customer;
 import sorant.diplom.srs.repositories.CustomerRepository;
 import sorant.diplom.srs.services.CustomerService;
 

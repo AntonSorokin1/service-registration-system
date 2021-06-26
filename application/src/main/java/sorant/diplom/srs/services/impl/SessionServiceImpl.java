@@ -1,7 +1,7 @@
 package sorant.diplom.srs.services.impl;
 
 import org.springframework.stereotype.Service;
-import sorant.diplom.srs.Session;
+import sorant.diplom.srs.entities.Session;
 import sorant.diplom.srs.repositories.SessionRepository;
 import sorant.diplom.srs.services.SessionService;
 
